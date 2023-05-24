@@ -18,7 +18,7 @@ jobs:
           path: cloud-api-specs
 
       - name: Move cloud-api-specs next to script
-        run: mv cloud-api-specs ../terraform-iot-analytics/modules/glue/
+        run: mv cloud-api-specs ./terraform-iot-analytics/modules/glue/
 
       - name: Run Python script to resolve references
         run: python ../terraform-iot-analytics/modules/glue/json-schema-ref-resolver.py
