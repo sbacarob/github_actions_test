@@ -10,6 +10,7 @@ jobs:
     name: Test cloning
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - name: Clone cloud-api-specs Repo
         uses: actions/checkout@v3
         with:
