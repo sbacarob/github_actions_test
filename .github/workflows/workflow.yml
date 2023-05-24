@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: 'sbacarob/three-little-pigs'
-          path: modules/glue
+          path: modules/glue/cloud-api-specs/
 
       - name: Run Python script to resolve references
         run: python modules/glue/json-schema-ref-resolver.py
