@@ -1,1 +1,2 @@
-print("HELLO WORLD")
+import os
+print(os.system("ls"))
