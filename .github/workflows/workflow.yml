@@ -17,4 +17,4 @@ jobs:
           path: './terraform-iot-analytics/modules/glue/cloud-api-specs'
 
       - name: Run Python script to resolve references
-        run: python ./terraform-iot-analytics/modules/glue/json-schema-ref-resolver.py
+        run: python terraform-iot-analytics/modules/glue/json-schema-ref-resolver.py
