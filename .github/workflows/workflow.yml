@@ -18,4 +18,10 @@ jobs:
           path: modules/glue/cloud-api-specs/
 
       - name: Run Python script to resolve references
-        run: python modules/glue/json-schema-ref-resolver.py --paths ${{ vars.SCHEMA_PATHS }}
+        run: python modules/glue/json-schema-ref-resolver.py --paths '${{ vars.SCHEMA_PATHS }}'
+
+      - name: Run TF
+        working-directory: backend/test
+        run: terraform init && terraform apply -auto-approve
+        env:
+          TF_VAR_glue_schema_paths: ${{ vars.SCHEMA_PATHS }}
