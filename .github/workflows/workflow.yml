@@ -18,4 +18,4 @@ jobs:
           path: modules/glue/cloud-api-specs/
 
       - name: Run Python script to resolve references
-        run: python modules/glue/json-schema-ref-resolver.py --paths '${{ vars.SCHEMA_PATHS }}'
+        run: python modules/glue/json-schema-ref-resolver.py --paths ${{ vars.SCHEMA_PATHS }}
